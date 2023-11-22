@@ -1,1 +1,13 @@
 Тут будет фротенд
+<script>
+var url = "//api.umarketshop.site";
+var response = await fetch(url);
+var json = "";
+
+if (response.ok) {
+  json = await response.json();
+	document.writeln(json.text);
+} else {
+  alert("Ошибка HTTP: " + response.status);
+}
+</script>
