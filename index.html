@@ -10,12 +10,12 @@
 <p id="text"></p>
     <button onclick="letsgo()">Проверить соединение</button>
 <script>
-    function letsgo(){
+    async function letsgo(){
     var url = "api.umarketshop.site/api";
     var response = await fetch(url);
     var json = "";
     if (response.ok) {
-        json = await response.json();
+    json = await response.json();
     document.getElenemtById("text").innerHTML = json.text;
     } else {
     alert("Ошибка HTTP: " + response.status);
