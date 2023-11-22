@@ -16,7 +16,7 @@
     var json = "";
     if (response.ok) {
     json = await response.json();
-    document.getElenemtById("text").innerHTML = json.text;
+   ocument.getElementById("text").innerHTML = json.text;
     } else {
     alert("Ошибка HTTP: " + response.status);
     }   
