@@ -1,14 +1,31 @@
-Тут будет фротенд
-Ждём ответ сервера...
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uMarket</title>
+</head>
+<body onload="load();">
+    Тут будет фротенд
+	<p id="text"></p>
 <script>
+
+
+	function load(){
 var url = "//api.umarketshop.site";
 var response = await fetch(url);
 var json = "";
-
 if (response.ok) {
-  json = await response.json();
-	document.writeln(json.text);
+json = await response.json();
+document.getElenemtById("text").innerHTML = json.text;
 } else {
-  alert("Ошибка HTTP: " + response.status);
+alert("Ошибка HTTP: " + response.status);
 }
+}
+
 </script>
+</body>
+</html>
+
+
+
